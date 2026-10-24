@@ -1,0 +1,52 @@
+-------------------------------------------------------------------------------
+Test set: ec.edu.espe.ivstudio.unihelper.model.TaskStatusTest
+-------------------------------------------------------------------------------
+Tests run: 10, Failures: 3, Errors: 1, Skipped: 0, Time elapsed: 0.056 s <<< FAILURE! -- in ec.edu.espe.ivstudio.unihelper.model.TaskStatusTest
+ec.edu.espe.ivstudio.unihelper.model.TaskStatusTest.test10_InProgressStringWithSpaces -- Time elapsed: 0.017 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <IN PROGRESS> but was: <IN_PROGRESS>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+	at ec.edu.espe.ivstudio.unihelper.model.TaskStatusTest.test10_InProgressStringWithSpaces(TaskStatusTest.java:90)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.ivstudio.unihelper.model.TaskStatusTest.test9_PendingStringInSpanish -- Time elapsed: 0.002 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <IN QUEUE> but was: <PENDING>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+	at ec.edu.espe.ivstudio.unihelper.model.TaskStatusTest.test9_PendingStringInSpanish(TaskStatusTest.java:85)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.ivstudio.unihelper.model.TaskStatusTest.test6_ExpectedCanceledStatusExists -- Time elapsed: 0.002 s <<< ERROR!
+java.lang.IllegalArgumentException: No enum constant ec.edu.espe.ivstudio.unihelper.model.TaskStatus.CANCELED
+	at java.base/java.lang.Enum.valueOf(Enum.java:293)
+	at ec.edu.espe.ivstudio.unihelper.model.TaskStatus.valueOf(TaskStatus.java:7)
+	at ec.edu.espe.ivstudio.unihelper.model.TaskStatusTest.test6_ExpectedCanceledStatusExists(TaskStatusTest.java:67)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.ivstudio.unihelper.model.TaskStatusTest.test7_TotalEnumCountShouldBeFour -- Time elapsed: 0.001 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <4> but was: <3>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:531)
+	at ec.edu.espe.ivstudio.unihelper.model.TaskStatusTest.test7_TotalEnumCountShouldBeFour(TaskStatusTest.java:73)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
