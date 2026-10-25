@@ -1,10 +1,17 @@
 package ec.edu.espe.ivstudio.unihelper.view;
 
+import ec.edu.espe.ivstudio.unihelper.controller.CalendarManager;
+import ec.edu.espe.ivstudio.unihelper.controller.GradeManager;
+import ec.edu.espe.ivstudio.unihelper.controller.StudySessionManager;
 import ec.edu.espe.ivstudio.unihelper.controller.TaskManager;
+import ec.edu.espe.ivstudio.unihelper.model.CalendarEvent;
+import ec.edu.espe.ivstudio.unihelper.model.GradeItem;
+import ec.edu.espe.ivstudio.unihelper.model.StudySession;
 import ec.edu.espe.ivstudio.unihelper.model.Task;
 import ec.edu.espe.ivstudio.unihelper.model.TaskStatus;
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Scanner;
 
 /**
  *
@@ -74,6 +81,103 @@ manager.addSubject("POO01", "Programacion Orientada a Objetos", 4);
         for (Task t : manager.getTasks()) {
             System.out.println(t.getTitle() + ": " + t.getBreakReminder());
         }
+        
+        Scanner scanner = new Scanner (System.in);
+           CalendarManager calendarManager = new CalendarManager();
+           GradeManager gradeManager = new GradeManager();
+           StudySessionManager  studySessionManager = new StudySessionManager();
+           int option = 0;
+           
+           do{
+               System.out.println("\n==== Uni-HELPER: CALENDAR =====");
+               System.out.println("1. Add Events");
+               System.out.println("2. View Events");
+               System.out.println("3 Add Grade");
+               System.out.println("4. View Grades & Average");
+               System.out.println("5. Start tudy Session");
+               System.out.println("6. View Study essions");
+               System.out.println("7. Exit");
+               System.out.println("Slect an option");
+               
+               option = scanner.nextInt();
+               scanner.nextLine();
+               
+               switch (option){
+                   case 1:
+                       System.out.println("Enter title: ");
+                       String title = scanner.nextLine();
+                       
+                       System.out.println("Enter date: ");
+                       String date = scanner.nextLine();
+                       
+                       System.out.println("Enter time: ");
+                       String time = scanner.nextLine();
+                       
+                       System.out.println("Enter description: ");
+                       String description = scanner.nextLine();
+                       
+                       CalendarEvent newEvent = new CalendarEvent(title, date, time, description);
+                       calendarManager.addEvent(newEvent);
+                       break;
+                   case 2:
+                       System.out.println("\n--- SCEDULED EVENTS ---");
+                       for(CalendarEvent e: calendarManager.getEvents()){
+                           System.out.println(e);
+                       }
+                       break;
+                       
+                   case 3:
+                       System.out.println("Enter grade name: ");
+                       String gradeName = scanner.nextLine();
+                       
+                       System.out.println("Enter score: ");
+                       double score = scanner.nextDouble();
+                       
+                       System.out.println("Enter weight (%)");
+                       double weight = scanner.nextDouble();
+                       scanner.nextLine();
+                       
+                       GradeItem newGrade = new GradeItem(gradeName, score, weight);
+                       gradeManager.addGrade(newGrade);
+                       break;
+                   case 4:
+                       System.out.println("\n--- GRADED ITEMS ---");
+                       for(GradeItem g : gradeManager.getGrades()){
+                           System.out.println(g);
+                       }
+                       System.out.println("Weighted Average: " + gradeManager.calculationWeightedAverage());
+                       break;
+                   case 5:
+                       System.out.println("Enter study topic: ");
+                       String topic = scanner.nextLine();
+                       
+                       System.out.println("Enter duration in minutes: ");
+                       int duration = scanner.nextInt();
+                       scanner.nextLine();
+                       
+                       StudySession newSession = new StudySession(topic, duration);
+                       studySessionManager.startSession(newSession);
+                       break;
+                       
+                   case 6:
+                       System.out.println("\n--- COMPLETED STUDY SESSIONS ---");
+                       if(studySessionManager.getCompletedSessions().isEmpty()){
+                           System.out.println("No study sessions completed yet.");
+                       }else{
+                           for(StudySession s : studySessionManager.getCompletedSessions()){
+                           System.out.println(s);   
+                           }
+                           System.out.println("Total Study Time: " + studySessionManager.getTotalStudyTimeMinutes() + "minutes.");
+                       }
+                       break;
+                       
+                   case 7:
+                       System.out.println("Exiting program...");
+                       break;
+                   default:
+                       System.out.println("Invalid option. Try again.");
+               }
+           }while (option !=7);
  
     }
     
