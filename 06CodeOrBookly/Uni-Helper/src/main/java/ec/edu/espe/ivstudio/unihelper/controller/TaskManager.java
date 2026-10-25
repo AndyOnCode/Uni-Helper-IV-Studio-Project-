@@ -55,6 +55,26 @@ public class TaskManager {
     
     }
     
+    public List<Task> filterBySubject(String subjectId) {
+        List<Task> result = new ArrayList<>();
+        for (Task t : tasks) {
+            if (t.getSubject().getId().equalsIgnoreCase(subjectId)) {
+                result.add(t);
+            }
+        }
+        return result;
+    }
+
+    public List<Task> getOverdueTasks() {
+        List<Task> result = new ArrayList<>();
+        for (Task t : tasks) {
+            if (t.isOverdue()) {
+                result.add(t);
+            }
+        }
+        return result;
+    }
+    
     public List<Task> getTasks(){
         return tasks;
     }

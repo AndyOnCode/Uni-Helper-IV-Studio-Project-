@@ -1,3 +1,4 @@
 ec\edu\espe\ivstudio\unihelper\model\SubjectTest.class
-ec\edu\espe\ivstudio\unihelper\model\TaskStatusTest.class
+ec\edu\espe\ivstudio\unihelper\controller\TaskManagerTest.class
 ec\edu\espe\ivstudio\unihelper\model\TaskTest.class
+ec\edu\espe\ivstudio\unihelper\model\TaskStatusTest.class

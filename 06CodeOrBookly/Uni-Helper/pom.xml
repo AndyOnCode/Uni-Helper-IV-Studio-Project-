@@ -34,6 +34,6 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.release>26</maven.compiler.release>
-        <exec.mainClass>ec.edu.espe.ivstudio.uni.helper.view.UniHelperApp</exec.mainClass>
+        <exec.mainClass>ec.edu.espe.ivstudio.unihelper.view.UniHelperApp</exec.mainClass>
     </properties>
 </project>

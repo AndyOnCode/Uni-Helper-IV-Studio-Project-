@@ -38,6 +38,19 @@ public class Task {
  
 
     }
+    
+    public boolean isOverdue() {
+    return dueDate.isBefore(LocalDate.now()) && status != TaskStatus.COMPLETED;
+    }
+    
+    public String getBreakReminder() {
+        int breaks = estimatedHours / 2;
+        if (breaks == 0) {
+            return "Tarea corta: no necesitas descanso.";
+        }
+        return "Toma " + breaks + " descanso(s) de 10 min durante esta tarea.";
+    }
+    
 
     public String getId() {
         return id;

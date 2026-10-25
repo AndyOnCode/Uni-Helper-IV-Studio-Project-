@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="ec.edu.espe.ivstudio.unihelper.model.TaskTest" time="0.067" tests="10" errors="0" skipped="0" failures="6">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="ec.edu.espe.ivstudio.unihelper.model.TaskTest" time="0.172" tests="20" errors="0" skipped="0" failures="9">
   <properties>
     <property name="java.specification.version" value="26"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.class.path" value="C:\Users\USER\Documents\NetBeansProjects\Uni-Helper\target\test-classes;C:\Users\USER\Documents\NetBeansProjects\Uni-Helper\target\classes;C:\Users\USER\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.3\junit-jupiter-api-5.10.3.jar;C:\Users\USER\.m2\repository\org\junit\platform\junit-platform-commons\1.10.3\junit-platform-commons-1.10.3.jar;C:\Users\USER\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\USER\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.3\junit-jupiter-params-5.10.3.jar;C:\Users\USER\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.3\junit-jupiter-engine-5.10.3.jar;C:\Users\USER\.m2\repository\org\junit\platform\junit-platform-engine\1.10.3\junit-platform-engine-1.10.3.jar;C:\Users\USER\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;"/>
+    <property name="java.class.path" value="C:\Users\Asus\Desktop\repositorio project\Uni-Helper-IV-Studio-Project-\06CodeOrBookly\Uni-Helper\target\test-classes;C:\Users\Asus\Desktop\repositorio project\Uni-Helper-IV-Studio-Project-\06CodeOrBookly\Uni-Helper\target\classes;C:\Users\Asus\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.3\junit-jupiter-api-5.10.3.jar;C:\Users\Asus\.m2\repository\org\junit\platform\junit-platform-commons\1.10.3\junit-platform-commons-1.10.3.jar;C:\Users\Asus\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\Asus\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.3\junit-jupiter-params-5.10.3.jar;C:\Users\Asus\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.3\junit-jupiter-engine-5.10.3.jar;C:\Users\Asus\.m2\repository\org\junit\platform\junit-platform-engine\1.10.3\junit-platform-engine-1.10.3.jar;C:\Users\Asus\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;"/>
     <property name="java.vm.vendor" value="Eclipse Adoptium"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
@@ -12,30 +12,30 @@
     <property name="user.timezone" value="America/Guayaquil"/>
     <property name="os.name" value="Windows 11"/>
     <property name="java.vm.specification.version" value="26"/>
-    <property name="user.country" value="US"/>
+    <property name="user.country" value="EC"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Apache NetBeans\jdk\bin"/>
-    <property name="sun.java.command" value="C:\Users\USER\AppData\Local\Temp\surefire16050377682521020964\surefirebooter-20261024185509887_3.jar C:\Users\USER\AppData\Local\Temp\surefire16050377682521020964 2026-10-24T18-55-09_797-jvmRun1 surefire-20261024185509887_1tmp surefire_0-20261024185509887_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\Asus\AppData\Local\Temp\surefire11970651098574065286\surefirebooter-20261024225513787_3.jar C:\Users\Asus\AppData\Local\Temp\surefire11970651098574065286 2026-10-24T22-55-13_577-jvmRun1 surefire-20261024225513787_1tmp surefire_0-20261024225513787_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="test" value="ec.edu.espe.ivstudio.unihelper.model.TaskTest"/>
-    <property name="surefire.test.class.path" value="C:\Users\USER\Documents\NetBeansProjects\Uni-Helper\target\test-classes;C:\Users\USER\Documents\NetBeansProjects\Uni-Helper\target\classes;C:\Users\USER\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.3\junit-jupiter-api-5.10.3.jar;C:\Users\USER\.m2\repository\org\junit\platform\junit-platform-commons\1.10.3\junit-platform-commons-1.10.3.jar;C:\Users\USER\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\USER\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.3\junit-jupiter-params-5.10.3.jar;C:\Users\USER\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.3\junit-jupiter-engine-5.10.3.jar;C:\Users\USER\.m2\repository\org\junit\platform\junit-platform-engine\1.10.3\junit-platform-engine-1.10.3.jar;C:\Users\USER\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;"/>
+    <property name="surefire.test.class.path" value="C:\Users\Asus\Desktop\repositorio project\Uni-Helper-IV-Studio-Project-\06CodeOrBookly\Uni-Helper\target\test-classes;C:\Users\Asus\Desktop\repositorio project\Uni-Helper-IV-Studio-Project-\06CodeOrBookly\Uni-Helper\target\classes;C:\Users\Asus\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.3\junit-jupiter-api-5.10.3.jar;C:\Users\Asus\.m2\repository\org\junit\platform\junit-platform-commons\1.10.3\junit-platform-commons-1.10.3.jar;C:\Users\Asus\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\Asus\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.3\junit-jupiter-params-5.10.3.jar;C:\Users\Asus\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.3\junit-jupiter-engine-5.10.3.jar;C:\Users\Asus\.m2\repository\org\junit\platform\junit-platform-engine\1.10.3\junit-platform-engine-1.10.3.jar;C:\Users\Asus\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
-    <property name="user.home" value="C:\Users\USER"/>
-    <property name="user.language" value="en"/>
+    <property name="user.home" value="C:\Users\Asus"/>
+    <property name="user.language" value="es"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="java.version.date" value="2026-07-21"/>
     <property name="java.home" value="C:\Program Files\Apache NetBeans\jdk"/>
     <property name="file.separator" value="\"/>
-    <property name="basedir" value="C:\Users\USER\Documents\NetBeansProjects\Uni-Helper"/>
+    <property name="basedir" value="C:\Users\Asus\Desktop\repositorio project\Uni-Helper-IV-Studio-Project-\06CodeOrBookly\Uni-Helper"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\USER\AppData\Local\Temp\surefire16050377682521020964\surefirebooter-20261024185509887_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\Asus\AppData\Local\Temp\surefire11970651098574065286\surefirebooter-20261024225513787_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="26.0.2+10"/>
-    <property name="user.name" value="USER"/>
+    <property name="user.name" value="Asus"/>
     <property name="stdout.encoding" value="Cp1252"/>
     <property name="path.separator" value=";"/>
     <property name="os.version" value="10.0"/>
@@ -44,16 +44,16 @@
     <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
     <property name="java.vendor.version" value="Temurin-26.0.2+10"/>
     <property name="maven.ext.class.path" value="C:\Program Files\Apache NetBeans\java\maven-nblib\netbeans-eventspy.jar"/>
-    <property name="localRepository" value="C:\Users\USER\.m2\repository"/>
+    <property name="localRepository" value="C:\Users\Asus\.m2\repository"/>
     <property name="java.vendor.url.bug" value="https://github.com/adoptium/adoptium-support/issues"/>
-    <property name="java.io.tmpdir" value="C:\Users\USER\AppData\Local\Temp\"/>
+    <property name="java.io.tmpdir" value="C:\Users\Asus\AppData\Local\Temp\"/>
     <property name="java.version" value="26.0.2"/>
-    <property name="user.dir" value="C:\Users\USER\Documents\NetBeansProjects\Uni-Helper"/>
+    <property name="user.dir" value="C:\Users\Asus\Desktop\repositorio project\Uni-Helper-IV-Studio-Project-\06CodeOrBookly\Uni-Helper"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="sun.os.patch.level" value=""/>
     <property name="native.encoding" value="Cp1252"/>
-    <property name="java.library.path" value="C:\Program Files\Apache NetBeans\jdk\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA App\NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\dotnet\;C:\Program Files\Java\jdk-26.0.2\bin;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Users\USER\AppData\Local\Programs\Python\Python314\Scripts\;C:\Users\USER\AppData\Local\Programs\Python\Python314\;C:\Users\USER\AppData\Local\Programs\Python\Launcher\;C:\Users\USER\AppData\Local\Microsoft\WindowsApps;C:\Users\USER\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\USER\AppData\Roaming\npm;C:\Users\USER\AppData\Local\Programs\Microsoft VS Code\bin\copilot-shim;C:\Program Files\Apache NetBeans\bin\;."/>
+    <property name="java.library.path" value="C:\Program Files\Apache NetBeans\jdk\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files\Eclipse Adoptium\jdk-17.0.20.8-hotspot\bin;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files\Common Files\Autodesk Shared\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Git\cmd;C:\Program Files\GitHub CLI\;C:\Program Files\nodejs\;C:\Users\Asus\AppData\Local\Microsoft\WindowsApps;C:\Users\Asus\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Asus\AppData\Local\Python\bin;C:\Users\Asus\AppData\Local\GitHubDesktop\bin;C:\Users\Asus\AppData\Roaming\npm;C:\Program Files\Apache NetBeans\bin\;."/>
     <property name="java.vm.info" value="mixed mode, sharing"/>
     <property name="stderr.encoding" value="Cp1252"/>
     <property name="java.vendor" value="Eclipse Adoptium"/>
@@ -62,7 +62,7 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="70.0"/>
   </properties>
-  <testcase name="test9_DefaultTaskStatusShouldBeInProgress" classname="ec.edu.espe.ivstudio.unihelper.model.TaskTest" time="0.029">
+  <testcase name="test9_DefaultTaskStatusShouldBeInProgress" classname="ec.edu.espe.ivstudio.unihelper.model.TaskTest" time="0.043">
     <failure message="expected: &lt;IN_PROGRESS&gt; but was: &lt;PENDING&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <IN_PROGRESS> but was: <PENDING>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -70,14 +70,14 @@
 	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
 	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
 	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
-	at ec.edu.espe.ivstudio.unihelper.model.TaskTest.test9_DefaultTaskStatusShouldBeInProgress(TaskTest.java:74)
+	at ec.edu.espe.ivstudio.unihelper.model.TaskTest.test9_DefaultTaskStatusShouldBeInProgress(TaskTest.java:86)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
 ]]></failure>
   </testcase>
-  <testcase name="test6_CalculatePriorityNormalReturnsLowOnly" classname="ec.edu.espe.ivstudio.unihelper.model.TaskTest" time="0.002"/>
-  <testcase name="test7_EstimatedHoursExpectedZero" classname="ec.edu.espe.ivstudio.unihelper.model.TaskTest" time="0.001">
+  <testcase name="test6_CalculatePriorityNormalReturnsLowOnly" classname="ec.edu.espe.ivstudio.unihelper.model.TaskTest" time="0.005"/>
+  <testcase name="test7_EstimatedHoursExpectedZero" classname="ec.edu.espe.ivstudio.unihelper.model.TaskTest" time="0.004">
     <failure message="expected: &lt;0&gt; but was: &lt;3&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <0> but was: <3>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -85,11 +85,51 @@
 	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
 	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
 	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:531)
-	at ec.edu.espe.ivstudio.unihelper.model.TaskTest.test7_EstimatedHoursExpectedZero(TaskTest.java:64)
+	at ec.edu.espe.ivstudio.unihelper.model.TaskTest.test7_EstimatedHoursExpectedZero(TaskTest.java:76)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
 ]]></failure>
+  </testcase>
+  <testcase name="testGetBreakReminder5_MaxFiveBreaks" classname="ec.edu.espe.ivstudio.unihelper.model.TaskTest" time="0.004">
+    <failure message="expected: &lt;Toma 5 descanso(s) de 10 min durante esta tarea.&gt; but was: &lt;Toma 10 descanso(s) de 10 min durante esta tarea.&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <Toma 5 descanso(s) de 10 min durante esta tarea.> but was: <Toma 10 descanso(s) de 10 min durante esta tarea.>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+	at ec.edu.espe.ivstudio.unihelper.model.TaskTest.testGetBreakReminder5_MaxFiveBreaks(TaskTest.java:141)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+]]></failure>
+    <system-out><![CDATA[getBreakReminder
+]]></system-out>
+  </testcase>
+  <testcase name="testGetBreakReminder8_CompletedTask" classname="ec.edu.espe.ivstudio.unihelper.model.TaskTest" time="0.003">
+    <failure message="expected: &lt;Tarea completada: no necesitas descanso.&gt; but was: &lt;Toma 3 descanso(s) de 10 min durante esta tarea.&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <Tarea completada: no necesitas descanso.> but was: <Toma 3 descanso(s) de 10 min durante esta tarea.>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+	at ec.edu.espe.ivstudio.unihelper.model.TaskTest.testGetBreakReminder8_CompletedTask(TaskTest.java:172)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+]]></failure>
+    <system-out><![CDATA[getBreakReminder
+]]></system-out>
+  </testcase>
+  <testcase name="testGetBreakReminder10_LongTaskIsNotShortMessage" classname="ec.edu.espe.ivstudio.unihelper.model.TaskTest" time="0.005">
+    <system-out><![CDATA[getBreakReminder
+]]></system-out>
+  </testcase>
+  <testcase name="testGetBreakReminder1_ZeroHours" classname="ec.edu.espe.ivstudio.unihelper.model.TaskTest" time="0.001">
+    <system-out><![CDATA[getBreakReminder
+]]></system-out>
   </testcase>
   <testcase name="test1_InitialStatusIsPending" classname="ec.edu.espe.ivstudio.unihelper.model.TaskTest" time="0.001"/>
   <testcase name="test8_DueDateExpectedYesterday" classname="ec.edu.espe.ivstudio.unihelper.model.TaskTest" time="0.001">
@@ -100,11 +140,27 @@
 	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
 	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
 	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
-	at ec.edu.espe.ivstudio.unihelper.model.TaskTest.test8_DueDateExpectedYesterday(TaskTest.java:69)
+	at ec.edu.espe.ivstudio.unihelper.model.TaskTest.test8_DueDateExpectedYesterday(TaskTest.java:81)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
 ]]></failure>
+  </testcase>
+  <testcase name="testGetBreakReminder3_NegativeHours" classname="ec.edu.espe.ivstudio.unihelper.model.TaskTest" time="0.001">
+    <failure message="expected: &lt;Tarea corta: no necesitas descanso.&gt; but was: &lt;Toma -2 descanso(s) de 10 min durante esta tarea.&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <Tarea corta: no necesitas descanso.> but was: <Toma -2 descanso(s) de 10 min durante esta tarea.>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+	at ec.edu.espe.ivstudio.unihelper.model.TaskTest.testGetBreakReminder3_NegativeHours(TaskTest.java:122)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+]]></failure>
+    <system-out><![CDATA[getBreakReminder
+]]></system-out>
   </testcase>
   <testcase name="test10_TaskIdPrefixExpectedSYS" classname="ec.edu.espe.ivstudio.unihelper.model.TaskTest" time="0.002">
     <failure message="expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
@@ -114,13 +170,21 @@
 	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
 	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:31)
 	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:183)
-	at ec.edu.espe.ivstudio.unihelper.model.TaskTest.test10_TaskIdPrefixExpectedSYS(TaskTest.java:79)
+	at ec.edu.espe.ivstudio.unihelper.model.TaskTest.test10_TaskIdPrefixExpectedSYS(TaskTest.java:91)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
 ]]></failure>
   </testcase>
-  <testcase name="test5_CalculatePriorityUrgentToday" classname="ec.edu.espe.ivstudio.unihelper.model.TaskTest" time="0.001">
+  <testcase name="testGetBreakReminder9_SubjectDoesNotAffect" classname="ec.edu.espe.ivstudio.unihelper.model.TaskTest" time="0.001">
+    <system-out><![CDATA[getBreakReminder
+]]></system-out>
+  </testcase>
+  <testcase name="testGetBreakReminder4_NotNull" classname="ec.edu.espe.ivstudio.unihelper.model.TaskTest" time="0.003">
+    <system-out><![CDATA[getBreakReminder
+]]></system-out>
+  </testcase>
+  <testcase name="test5_CalculatePriorityUrgentToday" classname="ec.edu.espe.ivstudio.unihelper.model.TaskTest" time="0.004">
     <failure message="expected: &lt;URGENT (Urgente)&gt; but was: &lt;URGENT&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <URGENT (Urgente)> but was: <URGENT>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -128,15 +192,19 @@
 	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
 	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
 	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
-	at ec.edu.espe.ivstudio.unihelper.model.TaskTest.test5_CalculatePriorityUrgentToday(TaskTest.java:53)
+	at ec.edu.espe.ivstudio.unihelper.model.TaskTest.test5_CalculatePriorityUrgentToday(TaskTest.java:65)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
 ]]></failure>
   </testcase>
-  <testcase name="test3_UpdateStatusToCompleted" classname="ec.edu.espe.ivstudio.unihelper.model.TaskTest" time="0.001"/>
-  <testcase name="test2_GetTaskAttributes" classname="ec.edu.espe.ivstudio.unihelper.model.TaskTest" time="0.001"/>
-  <testcase name="test4_CalculatePriorityOverdue" classname="ec.edu.espe.ivstudio.unihelper.model.TaskTest" time="0.001">
+  <testcase name="test3_UpdateStatusToCompleted" classname="ec.edu.espe.ivstudio.unihelper.model.TaskTest" time="0.002"/>
+  <testcase name="testGetBreakReminder2_PastDueDateSameResult" classname="ec.edu.espe.ivstudio.unihelper.model.TaskTest" time="0.001">
+    <system-out><![CDATA[getBreakReminder
+]]></system-out>
+  </testcase>
+  <testcase name="test2_GetTaskAttributes" classname="ec.edu.espe.ivstudio.unihelper.model.TaskTest" time="0.002"/>
+  <testcase name="test4_CalculatePriorityOverdue" classname="ec.edu.espe.ivstudio.unihelper.model.TaskTest" time="0.002">
     <failure message="expected: &lt;OVERDUE (Atrasada)&gt; but was: &lt;OVERDUE&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <OVERDUE (Atrasada)> but was: <OVERDUE>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -144,10 +212,18 @@
 	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
 	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
 	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
-	at ec.edu.espe.ivstudio.unihelper.model.TaskTest.test4_CalculatePriorityOverdue(TaskTest.java:47)
+	at ec.edu.espe.ivstudio.unihelper.model.TaskTest.test4_CalculatePriorityOverdue(TaskTest.java:59)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
 ]]></failure>
+  </testcase>
+  <testcase name="testGetBreakReminder7_TwoTasksIndependent" classname="ec.edu.espe.ivstudio.unihelper.model.TaskTest" time="0.001">
+    <system-out><![CDATA[getBreakReminder
+]]></system-out>
+  </testcase>
+  <testcase name="testGetBreakReminder6_CalledTwiceSameResult" classname="ec.edu.espe.ivstudio.unihelper.model.TaskTest" time="0.002">
+    <system-out><![CDATA[getBreakReminder
+]]></system-out>
   </testcase>
 </testsuite>

@@ -16,11 +16,23 @@ public class TaskTest {
     
     private Subject subject;
     private Task task;
+
+    @BeforeAll
+    public static void setUpClass() throws Exception {
+    }
+
+    @AfterAll
+    public static void tearDownClass() throws Exception {
+    }
     
     @BeforeEach
     public void setUp() {
         subject = new Subject("POO", "Programacion Orientada a Objetos", 4);
         task = new Task("TSK-01", "Taller 1", LocalDate.now().plusDays(5), 3, subject);
+    }
+
+    @AfterEach
+    public void tearDown() throws Exception {
     }
 
  
@@ -78,4 +90,105 @@ public class TaskTest {
     public void test10_TaskIdPrefixExpectedSYS() {
         assertTrue(task.getId().startsWith("SYS"));
     }
+
+    
+    @Test
+    public void testGetBreakReminder1_ZeroHours() {
+        System.out.println("getBreakReminder");
+        Subject subject = new Subject("POO01", "POO", 4);
+        Task instance = new Task("TSK-01", "Prueba", LocalDate.now().plusDays(1), 0, subject);
+        String expResult = "Tarea corta: no necesitas descanso.";
+        String result = instance.getBreakReminder();
+        assertEquals(expResult, result);
+    }
+
+    @Test
+    public void testGetBreakReminder2_PastDueDateSameResult() {
+        System.out.println("getBreakReminder");
+        Subject subject = new Subject("POO01", "POO", 4);
+        Task instance = new Task("TSK-01", "Prueba", LocalDate.now().minusDays(5), 4, subject);
+        String expResult = "Toma 2 descanso(s) de 10 min durante esta tarea.";
+        String result = instance.getBreakReminder();
+        assertEquals(expResult, result);
+    }
+
+    @Test
+    public void testGetBreakReminder3_NegativeHours() {
+        System.out.println("getBreakReminder");
+        Subject subject = new Subject("POO01", "POO", 4);
+        Task instance = new Task("TSK-01", "Prueba", LocalDate.now().plusDays(1), -4, subject);
+        String expResult = "Tarea corta: no necesitas descanso.";
+        String result = instance.getBreakReminder();
+        assertEquals(expResult, result);
+    }
+
+    @Test
+    public void testGetBreakReminder4_NotNull() {
+        System.out.println("getBreakReminder");
+        Subject subject = new Subject("POO01", "POO", 4);
+        Task instance = new Task("TSK-01", "Prueba", LocalDate.now().plusDays(1), 4, subject);
+        String result = instance.getBreakReminder();
+        assertNotNull(result);
+    }
+
+    @Test
+    public void testGetBreakReminder5_MaxFiveBreaks() {
+        System.out.println("getBreakReminder");
+        Subject subject = new Subject("POO01", "POO", 4);
+        Task instance = new Task("TSK-01", "Prueba", LocalDate.now().plusDays(1), 20, subject);
+        String expResult = "Toma 5 descanso(s) de 10 min durante esta tarea.";
+        String result = instance.getBreakReminder();
+        assertEquals(expResult, result);
+    }
+
+    @Test
+    public void testGetBreakReminder6_CalledTwiceSameResult() {
+        System.out.println("getBreakReminder");
+        Subject subject = new Subject("POO01", "POO", 4);
+        Task instance = new Task("TSK-01", "Prueba", LocalDate.now().plusDays(1), 5, subject);
+        String firstCall = instance.getBreakReminder();
+        String secondCall = instance.getBreakReminder();
+        assertEquals(firstCall, secondCall);
+    }
+
+    @Test
+    public void testGetBreakReminder7_TwoTasksIndependent() {
+        System.out.println("getBreakReminder");
+        Subject subject = new Subject("POO01", "POO", 4);
+        Task shortTask = new Task("TSK-01", "Corta", LocalDate.now().plusDays(1), 1, subject);
+        Task longTask = new Task("TSK-02", "Larga", LocalDate.now().plusDays(1), 8, subject);
+        assertEquals("Tarea corta: no necesitas descanso.", shortTask.getBreakReminder());
+        assertEquals("Toma 4 descanso(s) de 10 min durante esta tarea.", longTask.getBreakReminder());
+    }
+
+    @Test
+    public void testGetBreakReminder8_CompletedTask() {
+        System.out.println("getBreakReminder");
+        Subject subject = new Subject("POO01", "POO", 4);
+        Task instance = new Task("TSK-01", "Prueba", LocalDate.now().plusDays(1), 6, subject);
+        instance.setStatus(TaskStatus.COMPLETED);
+        String expResult = "Tarea completada: no necesitas descanso.";
+        String result = instance.getBreakReminder();
+        assertEquals(expResult, result);
+    }
+
+    @Test
+    public void testGetBreakReminder9_SubjectDoesNotAffect() {
+        System.out.println("getBreakReminder");
+        Subject poo = new Subject("POO01", "POO", 4);
+        Subject bd = new Subject("BD03", "Bases de Datos", 3);
+        Task first = new Task("TSK-01", "Prueba", LocalDate.now().plusDays(1), 4, poo);
+        Task second = new Task("TSK-02", "Prueba", LocalDate.now().plusDays(1), 4, bd);
+        assertEquals(first.getBreakReminder(), second.getBreakReminder());
+    }
+    
+    @Test
+    public void testGetBreakReminder10_LongTaskIsNotShortMessage() {
+        System.out.println("getBreakReminder");
+        Subject subject = new Subject("POO01", "POO", 4);
+        Task instance = new Task("TSK-01", "Prueba", LocalDate.now().plusDays(1), 8, subject);
+        String result = instance.getBreakReminder();
+        assertNotEquals("Tarea corta: no necesitas descanso.", result);
+    }
+    
 }

@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: ec.edu.espe.ivstudio.unihelper.model.TaskTest
 -------------------------------------------------------------------------------
-Tests run: 10, Failures: 6, Errors: 0, Skipped: 0, Time elapsed: 0.067 s <<< FAILURE! -- in ec.edu.espe.ivstudio.unihelper.model.TaskTest
-ec.edu.espe.ivstudio.unihelper.model.TaskTest.test9_DefaultTaskStatusShouldBeInProgress -- Time elapsed: 0.029 s <<< FAILURE!
+Tests run: 20, Failures: 9, Errors: 0, Skipped: 0, Time elapsed: 0.172 s <<< FAILURE! -- in ec.edu.espe.ivstudio.unihelper.model.TaskTest
+ec.edu.espe.ivstudio.unihelper.model.TaskTest.test9_DefaultTaskStatusShouldBeInProgress -- Time elapsed: 0.043 s <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <IN_PROGRESS> but was: <PENDING>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -10,12 +10,12 @@ org.opentest4j.AssertionFailedError: expected: <IN_PROGRESS> but was: <PENDING>
 	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
 	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
 	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
-	at ec.edu.espe.ivstudio.unihelper.model.TaskTest.test9_DefaultTaskStatusShouldBeInProgress(TaskTest.java:74)
+	at ec.edu.espe.ivstudio.unihelper.model.TaskTest.test9_DefaultTaskStatusShouldBeInProgress(TaskTest.java:86)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
 
-ec.edu.espe.ivstudio.unihelper.model.TaskTest.test7_EstimatedHoursExpectedZero -- Time elapsed: 0.001 s <<< FAILURE!
+ec.edu.espe.ivstudio.unihelper.model.TaskTest.test7_EstimatedHoursExpectedZero -- Time elapsed: 0.004 s <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <0> but was: <3>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -23,7 +23,33 @@ org.opentest4j.AssertionFailedError: expected: <0> but was: <3>
 	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
 	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
 	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:531)
-	at ec.edu.espe.ivstudio.unihelper.model.TaskTest.test7_EstimatedHoursExpectedZero(TaskTest.java:64)
+	at ec.edu.espe.ivstudio.unihelper.model.TaskTest.test7_EstimatedHoursExpectedZero(TaskTest.java:76)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.ivstudio.unihelper.model.TaskTest.testGetBreakReminder5_MaxFiveBreaks -- Time elapsed: 0.004 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <Toma 5 descanso(s) de 10 min durante esta tarea.> but was: <Toma 10 descanso(s) de 10 min durante esta tarea.>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+	at ec.edu.espe.ivstudio.unihelper.model.TaskTest.testGetBreakReminder5_MaxFiveBreaks(TaskTest.java:141)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.ivstudio.unihelper.model.TaskTest.testGetBreakReminder8_CompletedTask -- Time elapsed: 0.003 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <Tarea completada: no necesitas descanso.> but was: <Toma 3 descanso(s) de 10 min durante esta tarea.>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+	at ec.edu.espe.ivstudio.unihelper.model.TaskTest.testGetBreakReminder8_CompletedTask(TaskTest.java:172)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
@@ -36,7 +62,20 @@ org.opentest4j.AssertionFailedError: expected: <2026-10-23> but was: <2026-10-29
 	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
 	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
 	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
-	at ec.edu.espe.ivstudio.unihelper.model.TaskTest.test8_DueDateExpectedYesterday(TaskTest.java:69)
+	at ec.edu.espe.ivstudio.unihelper.model.TaskTest.test8_DueDateExpectedYesterday(TaskTest.java:81)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+ec.edu.espe.ivstudio.unihelper.model.TaskTest.testGetBreakReminder3_NegativeHours -- Time elapsed: 0.001 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <Tarea corta: no necesitas descanso.> but was: <Toma -2 descanso(s) de 10 min durante esta tarea.>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+	at ec.edu.espe.ivstudio.unihelper.model.TaskTest.testGetBreakReminder3_NegativeHours(TaskTest.java:122)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
@@ -49,12 +88,12 @@ org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
 	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
 	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:31)
 	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:183)
-	at ec.edu.espe.ivstudio.unihelper.model.TaskTest.test10_TaskIdPrefixExpectedSYS(TaskTest.java:79)
+	at ec.edu.espe.ivstudio.unihelper.model.TaskTest.test10_TaskIdPrefixExpectedSYS(TaskTest.java:91)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
 
-ec.edu.espe.ivstudio.unihelper.model.TaskTest.test5_CalculatePriorityUrgentToday -- Time elapsed: 0.001 s <<< FAILURE!
+ec.edu.espe.ivstudio.unihelper.model.TaskTest.test5_CalculatePriorityUrgentToday -- Time elapsed: 0.004 s <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <URGENT (Urgente)> but was: <URGENT>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -62,12 +101,12 @@ org.opentest4j.AssertionFailedError: expected: <URGENT (Urgente)> but was: <URGE
 	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
 	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
 	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
-	at ec.edu.espe.ivstudio.unihelper.model.TaskTest.test5_CalculatePriorityUrgentToday(TaskTest.java:53)
+	at ec.edu.espe.ivstudio.unihelper.model.TaskTest.test5_CalculatePriorityUrgentToday(TaskTest.java:65)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
 
-ec.edu.espe.ivstudio.unihelper.model.TaskTest.test4_CalculatePriorityOverdue -- Time elapsed: 0.001 s <<< FAILURE!
+ec.edu.espe.ivstudio.unihelper.model.TaskTest.test4_CalculatePriorityOverdue -- Time elapsed: 0.002 s <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <OVERDUE (Atrasada)> but was: <OVERDUE>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -75,7 +114,7 @@ org.opentest4j.AssertionFailedError: expected: <OVERDUE (Atrasada)> but was: <OV
 	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
 	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
 	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
-	at ec.edu.espe.ivstudio.unihelper.model.TaskTest.test4_CalculatePriorityOverdue(TaskTest.java:47)
+	at ec.edu.espe.ivstudio.unihelper.model.TaskTest.test4_CalculatePriorityOverdue(TaskTest.java:59)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
