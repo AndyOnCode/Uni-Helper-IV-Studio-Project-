@@ -46,9 +46,9 @@ public class Task {
     public String getBreakReminder() {
         int breaks = estimatedHours / 2;
         if (breaks == 0) {
-            return "Tarea corta: no necesitas descanso.";
+            return "Short task: no break needed.";
         }
-        return "Toma " + breaks + " descanso(s) de 10 min durante esta tarea.";
+        return "Take " + breaks + " 10-minute break(s) during this task.";
     }
     
 

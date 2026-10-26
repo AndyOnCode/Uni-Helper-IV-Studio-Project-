@@ -18,7 +18,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 /**
  *
- * @author Asus
+ * @author Nohemi Tocagon, IV Studio, @ESPE
  */
 public class TaskManagerTest {
     
