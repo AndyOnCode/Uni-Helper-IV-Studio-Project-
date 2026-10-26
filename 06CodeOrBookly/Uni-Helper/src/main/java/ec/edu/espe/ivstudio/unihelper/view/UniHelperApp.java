@@ -1,6 +1,8 @@
 package ec.edu.espe.ivstudio.unihelper.view;
-import ec.edu.espe.ivstudio.unihelper.model.*;
+
 import ec.edu.espe.ivstudio.unihelper.controller.*;
+import ec.edu.espe.ivstudio.unihelper.model.*;
+
 import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.util.Arrays;
@@ -25,9 +27,9 @@ public class UniHelperApp {
         // --- AUTHENTICATION PHASE ---
         List<UserAccount> existingUsers = JsonStorage.loadListFromFile(USERS_FILE, UserAccount.class);
         AuthService authService = new AuthService(existingUsers);
+        UserAccount currentUser = null;
 
-        boolean authenticated = false;
-        while (!authenticated) {
+        while (currentUser == null) {
             System.out.println("\n--- ACCESS CONTROL ---");
             System.out.println("1. Login");
             System.out.println("2. Register");
@@ -45,8 +47,13 @@ public class UniHelperApp {
                     String pass = scanner.nextLine().trim();
 
                     if (authService.authenticate(user, pass)) {
+                        for (UserAccount account : existingUsers) {
+                            if (account.getUsername().equalsIgnoreCase(user)) {
+                                currentUser = account;
+                                break;
+                            }
+                        }
                         System.out.println("Authentication successful! Welcome, " + user + ".");
-                        authenticated = true;
                     } else {
                         System.out.println("Invalid username or password.");
                     }
@@ -58,8 +65,11 @@ public class UniHelperApp {
                     String newPass = scanner.nextLine().trim();
 
                     if (authService.register(newUser, newPass)) {
-                        JsonStorage.saveListToFile(USERS_FILE, authService.getUsers());
-                        System.out.println("Account registered successfully! Please log in.");
+                        if (saveUsers(authService.getUsers())) {
+                            System.out.println("Account registered successfully! Please log in.");
+                        } else {
+                            System.out.println("Account registered, but could not save users.json.");
+                        }
                     } else {
                         System.out.println("Username already exists.");
                     }
@@ -68,16 +78,18 @@ public class UniHelperApp {
                     System.out.println("Exiting Uni-Helper...");
                     return;
                 }
-                default -> System.out.println("Invalid option.");
+                default -> System.out.println("Invalid option. Try again.");
             }
         }
 
-        // --- MANAGERS INITIALIZATION ---
+        // --- MANAGERS INITIALIZATION BOUND TO CURRENT USER ---
+// --- MANAGERS INITIALIZATION ---
         TaskManager manager = new TaskManager();
-        CalendarManager calendarManager = new CalendarManager();
-        GradeManager gradeManager = new GradeManager();
-        StudySessionManager studySessionManager = new StudySessionManager();
+        CalendarManager calendarManager = new CalendarManager(currentUser.getCalendarEvents());
+        GradeManager gradeManager = new GradeManager(currentUser.getGrades());
+        StudySessionManager studySessionManager = new StudySessionManager(currentUser.getStudySessions());
         BudgetService budgetService = new BudgetService();
+<<<<<<< HEAD
         ScheduleService scheduleService = new ScheduleService();
 
         // Sample initial academic subjects and tasks
@@ -147,11 +159,14 @@ public class UniHelperApp {
         for (Task task : manager.getTasks()) {
             System.out.println(task.getTitle() + ": " + task.getBreakReminder());
         }
+=======
+        ScheduleService scheduleService = new ScheduleService(currentUser.getScheduleBlocks());
+>>>>>>> e02a7ee (JSON report)
 
         // --- MAIN APPLICATION MENU ---
         int option = 0;
         do {
-            System.out.println("\n==== UNI-HELPER: MAIN CONTROL =====");
+            System.out.println("\n==== UNI-HELPER: MAIN CONTROL (" + currentUser.getUsername() + ") =====");
             System.out.println("1. Add Events (Calendar)");
             System.out.println("2. View Events (Calendar)");
             System.out.println("3. Add Grade");
@@ -161,7 +176,7 @@ public class UniHelperApp {
             System.out.println("7. Calculate Smart Daily Budget");
             System.out.println("8. Add Academic Schedule Block");
             System.out.println("9. View Academic Schedule");
-            System.out.println("10. Exit");
+            System.out.println("10. Save and Exit");
             System.out.print("Select an option: ");
 
             option = scanner.nextInt();
@@ -171,20 +186,33 @@ public class UniHelperApp {
                 case 1 -> {
                     System.out.print("Enter title: ");
                     String title = scanner.nextLine();
-                    System.out.print("Enter date: ");
+                    System.out.print("Enter date (YYYY-MM-DD): ");
                     String date = scanner.nextLine();
-                    System.out.print("Enter time: ");
+                    System.out.print("Enter time (HH:MM): ");
                     String time = scanner.nextLine();
                     System.out.print("Enter description: ");
                     String description = scanner.nextLine();
 
                     CalendarEvent newEvent = new CalendarEvent(title, date, time, description);
                     calendarManager.addEvent(newEvent);
+                    currentUser.getCalendarEvents().add(newEvent);
+
+                    JsonStorage.saveListToFile(USERS_FILE, existingUsers);
+                    System.out.println("Event added and saved successfully!");
+                    if (saveUsers(existingUsers)) {
+                        System.out.println("Event added and saved successfully!");
+                    } else {
+                        System.out.println("Event added, but could not be saved.");
+                    }
                 }
                 case 2 -> {
                     System.out.println("\n--- SCHEDULED EVENTS ---");
-                    for (CalendarEvent e : calendarManager.getEvents()) {
-                        System.out.println(e);
+                    if (calendarManager.getEvents().isEmpty()) {
+                        System.out.println("No events scheduled yet.");
+                    } else {
+                        for (CalendarEvent e : calendarManager.getEvents()) {
+                            System.out.println(e);
+                        }
                     }
                 }
                 case 3 -> {
@@ -198,13 +226,26 @@ public class UniHelperApp {
 
                     GradeItem newGrade = new GradeItem(gradeName, score, weight);
                     gradeManager.addGrade(newGrade);
+                    currentUser.getGrades().add(newGrade);
+
+                    JsonStorage.saveListToFile(USERS_FILE, existingUsers);
+                    System.out.println("Grade registered and saved successfully!");
+                    if (saveUsers(existingUsers)) {
+                        System.out.println("Grade registered and saved successfully!");
+                    } else {
+                        System.out.println("Grade registered, but could not be saved.");
+                    }
                 }
                 case 4 -> {
                     System.out.println("\n--- GRADED ITEMS ---");
-                    for (GradeItem g : gradeManager.getGrades()) {
-                        System.out.println(g);
+                    if (gradeManager.getGrades().isEmpty()) {
+                        System.out.println("No grades registered yet.");
+                    } else {
+                        for (GradeItem g : gradeManager.getGrades()) {
+                            System.out.println(g);
+                        }
+                        System.out.println("Weighted Average: " + gradeManager.calculationWeightedAverage());
                     }
-                    System.out.println("Weighted Average: " + gradeManager.calculationWeightedAverage());
                 }
                 case 5 -> {
                     System.out.print("Enter study topic: ");
@@ -213,8 +254,19 @@ public class UniHelperApp {
                     int duration = scanner.nextInt();
                     scanner.nextLine();
 
+
                     StudySession newSession = new StudySession(topic, duration);
                     studySessionManager.startSession(newSession);
+
+                    currentUser.getStudySessions().add(newSession);
+
+                    JsonStorage.saveListToFile(USERS_FILE, existingUsers);
+                    System.out.println("Study session recorded and saved!");
+                    if (saveUsers(existingUsers)) {
+                        System.out.println("Study session recorded and saved!");
+                    } else {
+                        System.out.println("Study session completed, but could not be saved.");
+                    }
                 }
                 case 6 -> {
                     System.out.println("\n--- COMPLETED STUDY SESSIONS ---");
@@ -250,7 +302,12 @@ public class UniHelperApp {
                     List<String> keywords = Arrays.asList(kw.split("\\s*,\\s*"));
 
                     long budgetCents = budgetService.calculateDailyBudget(tier, eatCampus, car, keywords);
-                    System.out.println("Calculated weekly Budget: " + BudgetService.formatCentsToCurrency(budgetCents));
+                    System.out.println("Calculated Daily Budget: " + BudgetService.formatCentsToCurrency(budgetCents));
+                    currentUser.getBudgetCalculations().add(
+                            new BudgetCalculation(tier, eatCampus, car, keywords, budgetCents));
+                    if (!saveUsers(existingUsers)) {
+                        System.out.println("Budget calculation could not be saved.");
+                    }
                 }
                 case 8 -> {
                     System.out.println("\n--- ADD ACADEMIC SCHEDULE BLOCK ---");
@@ -275,7 +332,11 @@ public class UniHelperApp {
 
                         ScheduleService.AcademicBlock block = new ScheduleService.AcademicBlock(day, room, subject, keywords);
                         scheduleService.addOrUpdateBlock(block, LocalDate.now());
-                        System.out.println("Schedule block saved: " + subject + " in " + room.formatted() + " for " + day);
+                        if (saveUsers(existingUsers)) {
+                            System.out.println("Schedule block saved: " + subject + " in " + room.formatted() + " for " + day);
+                        } else {
+                            System.out.println("Schedule block added, but could not be saved.");
+                        }
 
                     } catch (IllegalArgumentException e) {
                         System.out.println("Validation Error: " + e.getMessage());
@@ -301,9 +362,19 @@ public class UniHelperApp {
                         System.out.println("Invalid day entered.");
                     }
                 }
-                case 10 -> System.out.println("Exiting program...");
+                case 10 -> {
+                    if (saveUsers(existingUsers)) {
+                        System.out.println("All session data saved. Exiting Uni-Helper...");
+                    } else {
+                        System.out.println("Some session data could not be saved. Exiting Uni-Helper...");
+                    }
+                }
                 default -> System.out.println("Invalid option. Try again.");
             }
         } while (option != 10);
+    }
+
+    private static boolean saveUsers(List<UserAccount> users) {
+        return JsonStorage.saveListToFile(USERS_FILE, users);
     }
 }

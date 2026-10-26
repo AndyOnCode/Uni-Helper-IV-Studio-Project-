@@ -12,7 +12,11 @@ public class GradeManager {
     private List<GradeItem> grades;
 
     public GradeManager() {
-        this.grades = new ArrayList<>();
+        this(new ArrayList<>());
+    }
+
+    public GradeManager(List<GradeItem> grades) {
+        this.grades = grades;
     }
     
     public void addGrade(GradeItem grade){

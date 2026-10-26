@@ -12,7 +12,11 @@ public class CalendarManager {
     private List<CalendarEvent> events;
     
     public CalendarManager() {
-        this.events = new ArrayList<>();
+        this(new ArrayList<>());
+    }
+
+    public CalendarManager(List<CalendarEvent> events) {
+        this.events = events;
     }
     
     public void addEvent(CalendarEvent event){
@@ -24,4 +28,3 @@ public class CalendarManager {
         return events;
     }  
 }
-

@@ -23,8 +23,8 @@ public class AppController {
 
     public boolean handleRegister(String username, String rawPassword) {
         boolean success = authService.register(username, rawPassword);
-        if (success) {
-            JsonStorage.saveListToFile(USERS_FILE, authService.getUsers());
+        if (success && !JsonStorage.saveListToFile(USERS_FILE, authService.getUsers())) {
+            System.err.println("Registration succeeded, but users.json could not be saved.");
         }
         return success;
     }

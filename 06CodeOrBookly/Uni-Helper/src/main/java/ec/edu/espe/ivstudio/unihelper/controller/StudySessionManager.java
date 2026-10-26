@@ -12,7 +12,11 @@ public class StudySessionManager {
     private List<StudySession> completedSessions;
     
     public StudySessionManager(){
-        this.completedSessions = new ArrayList<>();
+        this(new ArrayList<>());
+    }
+
+    public StudySessionManager(List<StudySession> completedSessions){
+        this.completedSessions = completedSessions;
     }
     
     public void startSession(StudySession session){

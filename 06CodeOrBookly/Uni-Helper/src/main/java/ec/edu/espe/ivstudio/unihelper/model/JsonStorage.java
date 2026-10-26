@@ -13,15 +13,20 @@ import java.io.IOException;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
-
+/**
+ *
+ * @author Tomas Tapia, IV Studio, @ESPE
+ */
 public class JsonStorage {
     private static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
 
-    public static <T> void saveListToFile(String filename, List<T> data) {
+    public static <T> boolean saveListToFile(String filename, List<T> data) {
         try (FileWriter writer = new FileWriter(filename)) {
             GSON.toJson(data, writer);
+            return true;
         } catch (IOException e) {
             System.err.println("Error saving data to " + filename + ": " + e.getMessage());
+            return false;
         }
     }
 
@@ -41,4 +46,3 @@ public class JsonStorage {
         }
     }
 }
-

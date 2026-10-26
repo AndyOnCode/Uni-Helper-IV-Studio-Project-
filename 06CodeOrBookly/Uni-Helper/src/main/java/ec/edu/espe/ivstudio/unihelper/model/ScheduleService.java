@@ -16,7 +16,15 @@ public class ScheduleService {
             List<String> keywords
     ) {}
 
-    private final List<AcademicBlock> currentWeekBlocks = new ArrayList<>();
+    private final List<AcademicBlock> currentWeekBlocks;
+
+    public ScheduleService() {
+        this(new ArrayList<>());
+    }
+
+    public ScheduleService(List<AcademicBlock> currentWeekBlocks) {
+        this.currentWeekBlocks = currentWeekBlocks;
+    }
 
     public void addOrUpdateBlock(AcademicBlock block, LocalDate currentDate) {
         DayOfWeek today = currentDate.getDayOfWeek();
@@ -36,4 +44,3 @@ public class ScheduleService {
                 .toList();
     }
 }
-
