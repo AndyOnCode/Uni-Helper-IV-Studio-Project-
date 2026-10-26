@@ -250,7 +250,7 @@ public class UniHelperApp {
                     List<String> keywords = Arrays.asList(kw.split("\\s*,\\s*"));
 
                     long budgetCents = budgetService.calculateDailyBudget(tier, eatCampus, car, keywords);
-                    System.out.println("Calculated Daily Budget: " + BudgetService.formatCentsToCurrency(budgetCents));
+                    System.out.println("Calculated weekly Budget: " + BudgetService.formatCentsToCurrency(budgetCents));
                 }
                 case 8 -> {
                     System.out.println("\n--- ADD ACADEMIC SCHEDULE BLOCK ---");
