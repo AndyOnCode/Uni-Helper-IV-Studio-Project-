@@ -1,0 +1,62 @@
+[
+  {
+    "username": "Tomas",
+    "passwordHash": "c9affe7f758723c3eb9fe8b143520c7d3c73fa7cacdbf1a76b34e18624cc6ecf",
+    "tasks": [],
+    "calendarEvents": [],
+    "grades": [],
+    "studySessions": [
+      {
+        "topic": "physic",
+        "durationMinutes": 1
+      }
+    ],
+    "scheduleBlocks": [
+      {
+        "dayOfWeek": "TUESDAY",
+        "room": {
+          "block": "A",
+          "roomNumber": "101"
+        },
+        "subjectName": "Chemistry",
+        "keywords": [
+          "laboratory"
+        ]
+      },
+      {
+        "dayOfWeek": "MONDAY",
+        "room": {
+          "block": "E",
+          "roomNumber": "101"
+        },
+        "subjectName": "cac",
+        "keywords": [
+          "cac"
+        ]
+      },
+      {
+        "dayOfWeek": "MONDAY",
+        "room": {
+          "block": "a",
+          "roomNumber": "202"
+        },
+        "subjectName": "dad",
+        "keywords": [
+          "dad"
+        ]
+      },
+      {
+        "dayOfWeek": "MONDAY",
+        "room": {
+          "block": "e",
+          "roomNumber": "202"
+        },
+        "subjectName": "dad",
+        "keywords": [
+          "d"
+        ]
+      }
+    ],
+    "budgetCalculations": []
+  }
+]

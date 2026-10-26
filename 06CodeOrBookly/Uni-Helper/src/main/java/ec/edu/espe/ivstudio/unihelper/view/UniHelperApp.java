@@ -89,9 +89,9 @@ public class UniHelperApp {
         GradeManager gradeManager = new GradeManager(currentUser.getGrades());
         StudySessionManager studySessionManager = new StudySessionManager(currentUser.getStudySessions());
         BudgetService budgetService = new BudgetService();
-<<<<<<< HEAD
-        ScheduleService scheduleService = new ScheduleService();
+        ScheduleService scheduleService = new ScheduleService(currentUser.getScheduleBlocks());
 
+        /*
         // Sample initial academic subjects and tasks
         manager.addSubject("POO01", "Object Programming Oriented", 4);
         manager.addSubject("ED02", "Data Structures", 4);
@@ -159,9 +159,9 @@ public class UniHelperApp {
         for (Task task : manager.getTasks()) {
             System.out.println(task.getTitle() + ": " + task.getBreakReminder());
         }
-=======
-        ScheduleService scheduleService = new ScheduleService(currentUser.getScheduleBlocks());
->>>>>>> e02a7ee (JSON report)
+        */
+
+
 
         // --- MAIN APPLICATION MENU ---
         int option = 0;
@@ -195,7 +195,7 @@ public class UniHelperApp {
 
                     CalendarEvent newEvent = new CalendarEvent(title, date, time, description);
                     calendarManager.addEvent(newEvent);
-                    currentUser.getCalendarEvents().add(newEvent);
+
 
                     JsonStorage.saveListToFile(USERS_FILE, existingUsers);
                     System.out.println("Event added and saved successfully!");
@@ -225,7 +225,7 @@ public class UniHelperApp {
                     scanner.nextLine();
 
                     GradeItem newGrade = new GradeItem(gradeName, score, weight);
-                    gradeManager.addGrade(newGrade);
+
                     currentUser.getGrades().add(newGrade);
 
                     JsonStorage.saveListToFile(USERS_FILE, existingUsers);
@@ -258,7 +258,7 @@ public class UniHelperApp {
                     StudySession newSession = new StudySession(topic, duration);
                     studySessionManager.startSession(newSession);
 
-                    currentUser.getStudySessions().add(newSession);
+
 
                     JsonStorage.saveListToFile(USERS_FILE, existingUsers);
                     System.out.println("Study session recorded and saved!");
@@ -318,9 +318,12 @@ public class UniHelperApp {
                         DayOfWeek day = DayOfWeek.valueOf(dayStr);
                         System.out.print("Enter Block letter (A-H): ");
                         String blockCode = scanner.nextLine().trim();
+                        if (blockCode.equals("E") || blockCode.equals("F")||blockCode.equals("e") || blockCode.equals("f")) {
+                            System.out.println("Enter a valid Block");
+                            break;
+                        }
                         System.out.print("Enter Room number (e.g., 202, 101): ");
                         String roomNum = scanner.nextLine().trim();
-
                         RoomIdentifier room = new RoomIdentifier(blockCode, roomNum);
 
                         System.out.print("Enter Subject Name: ");
