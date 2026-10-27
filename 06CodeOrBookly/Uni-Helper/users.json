@@ -1,6 +1,90 @@
 [
   {
     "username": "example",
-    "passwordHash": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3"
+    "passwordHash": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
+    "tasks": [],
+    "calendarEvents": [],
+    "grades": [],
+    "studySessions": [],
+    "scheduleBlocks": [],
+    "budgetCalculations": []
+  },
+  {
+    "username": "AndyOnCode",
+    "passwordHash": "5c6effd8614286fc4d54b2a734a65e4a6553e2647e1fde2ad1b84bf363146006",
+    "tasks": [],
+    "calendarEvents": [
+      {
+        "title": "ordinary differential equations exam",
+        "date": "2026-10-28",
+        "time": "9:00",
+        "description": "Study all resolutions of the EDO\u0027s"
+      }
+    ],
+    "grades": [
+      {
+        "name": "Physic 1 - Test 1.u1",
+        "score": 8.0,
+        "weight": 25.0
+      },
+      {
+        "name": "OOP Project",
+        "score": 19.0,
+        "weight": 20.0
+      }
+    ],
+    "studySessions": [
+      {
+        "topic": "EDO\u0027s resolutions",
+        "durationMinutes": 120
+      }
+    ],
+    "scheduleBlocks": [
+      {
+        "dayOfWeek": "WEDNESDAY",
+        "room": {
+          "block": "C",
+          "roomNumber": "310"
+        },
+        "subjectName": "EDO",
+        "keywords": [
+          "Exam"
+        ]
+      }
+    ],
+    "budgetCalculations": [
+      {
+        "tier": "SAVE",
+        "eatAtCampus": false,
+        "usesPersonalCar": true,
+        "keywords": [
+          "exam",
+          "test",
+          "projects"
+        ],
+        "calculatedBudgetCents": 1900
+      },
+      {
+        "tier": "RECOMMENDED",
+        "eatAtCampus": false,
+        "usesPersonalCar": true,
+        "keywords": [
+          "laboratory",
+          "exams"
+        ],
+        "calculatedBudgetCents": 2200
+      },
+      {
+        "tier": "SOCIAL",
+        "eatAtCampus": true,
+        "usesPersonalCar": true,
+        "keywords": [
+          "projects",
+          "exams",
+          "lunch"
+        ],
+        "calculatedBudgetCents": 3150
+      }
+    ]
   }
 ]

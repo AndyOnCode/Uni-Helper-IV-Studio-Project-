@@ -24,7 +24,6 @@ public class UniHelperApp {
         System.out.println("       UNI-HELPER SYSTEM V0.5.0      ");
         System.out.println("=====================================");
 
-        // --- AUTHENTICATION PHASE ---
         List<UserAccount> existingUsers = JsonStorage.loadListFromFile(USERS_FILE, UserAccount.class);
         AuthService authService = new AuthService(existingUsers);
         UserAccount currentUser = null;
@@ -82,8 +81,6 @@ public class UniHelperApp {
             }
         }
 
-        // --- MANAGERS INITIALIZATION BOUND TO CURRENT USER ---
-// --- MANAGERS INITIALIZATION ---
         TaskManager manager = new TaskManager();
         CalendarManager calendarManager = new CalendarManager(currentUser.getCalendarEvents());
         GradeManager gradeManager = new GradeManager(currentUser.getGrades());
@@ -91,79 +88,7 @@ public class UniHelperApp {
         BudgetService budgetService = new BudgetService();
         ScheduleService scheduleService = new ScheduleService(currentUser.getScheduleBlocks());
 
-        /*
-        // Sample initial academic subjects and tasks
-        manager.addSubject("POO01", "Object Programming Oriented", 4);
-        manager.addSubject("ED02", "Data Structures", 4);
-        manager.createTask("TSK-01", "Polymorphism Workshop", LocalDate.now().plusDays(1), 3, "POO01");
-        manager.createTask("TSK-02", "Final Project Phase 1", LocalDate.now().plusDays(3), 8, "POO01");
-        manager.createTask("TSK-03", "Linked Lists Reading", LocalDate.now().plusDays(7), 2, "ED02");
-
-        manager.addSubject("BD03", "Databases", 3);
-        manager.createTask("TSK-04", "Report", LocalDate.now().minusDays(2), 2, "ED02");
-        manager.createTask("TSK-05", "ER Diagram", LocalDate.now().minusDays(5), 4, "BD03");
-        manager.createTask("TSK-06", "Workshop", LocalDate.now().minusDays(1), 3, "POO01");
-        manager.updateStatus("TSK-06", TaskStatus.COMPLETED);
-
-        // Display sample system checks
-        System.out.println("\n--- REGISTERED TASK LIST ---");
-        for (Task task : manager.getTasks()) {
-            System.out.println(task);
-        }
-
-        System.out.println("\n--- ACTUALIZANDO ESTADO DE TAREA TSK-01 ---");
-        manager.updateStatus("TSK-01", TaskStatus.IN_PROGRESS);
-        for (Task task : manager.getTasks()) {
-            if (task.getId().equals("TSK-01")) {
-                System.out.println(task);
-            }
-        }
-        System.out.println("==================================================");
-
-        System.out.println("\n--- TASK FILTER  ---");
-        System.out.println("Available materials:");
-        for (Subject subject : manager.getSubjects()) {
-            System.out.println("- " + subject.getId() + " (" + subject.getName() + ")");
-        }
-
-        String subjectId;
-        do {
-            System.out.print("ID of matter to filter (or 'Exit'): ");
-            subjectId = scanner.nextLine().trim();
-
-            if (!subjectId.equalsIgnoreCase("salir")) {
-                List<Task> filtered = manager.filterBySubject(subjectId);
-                if (filtered.isEmpty()) {
-                    System.out.println("There are no assignments for that subject.");
-                } else {
-                    for (Task task : filtered) {
-                        System.out.println(task);
-                    }
-                }
-            }
-        } while (!subjectId.equalsIgnoreCase("Exit"));
-        System.out.println("==================================================");
-
-        System.out.println("\n--- TASKS DUE ---");
-        List<Task> overdue = manager.getOverdueTasks();
-        if (overdue.isEmpty()) {
-            System.out.println("You have no overdue tasks.");
-        } else {
-            for (Task task : overdue) {
-                System.out.println("ALERT: " + task.getTitle());
-            }
-        }
-        System.out.println("==================================================");
-
-        System.out.println("\n--- BREAKS ---");
-        for (Task task : manager.getTasks()) {
-            System.out.println(task.getTitle() + ": " + task.getBreakReminder());
-        }
-        */
-
-
-
-        // --- MAIN APPLICATION MENU ---
+       
         int option = 0;
         do {
             System.out.println("\n==== UNI-HELPER: MAIN CONTROL (" + currentUser.getUsername() + ") =====");

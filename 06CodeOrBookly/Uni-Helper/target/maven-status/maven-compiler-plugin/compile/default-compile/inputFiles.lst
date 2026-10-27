@@ -1,19 +1,20 @@
-C:\Users\Asus\Desktop\repositorio project\Uni-Helper-IV-Studio-Project-\06CodeOrBookly\Uni-Helper\src\main\java\ec\edu\espe\ivstudio\unihelper\controller\AppController.java
-C:\Users\Asus\Desktop\repositorio project\Uni-Helper-IV-Studio-Project-\06CodeOrBookly\Uni-Helper\src\main\java\ec\edu\espe\ivstudio\unihelper\controller\CalendarManager.java
-C:\Users\Asus\Desktop\repositorio project\Uni-Helper-IV-Studio-Project-\06CodeOrBookly\Uni-Helper\src\main\java\ec\edu\espe\ivstudio\unihelper\controller\GradeManager.java
-C:\Users\Asus\Desktop\repositorio project\Uni-Helper-IV-Studio-Project-\06CodeOrBookly\Uni-Helper\src\main\java\ec\edu\espe\ivstudio\unihelper\controller\StudySessionManager.java
-C:\Users\Asus\Desktop\repositorio project\Uni-Helper-IV-Studio-Project-\06CodeOrBookly\Uni-Helper\src\main\java\ec\edu\espe\ivstudio\unihelper\controller\TaskManager.java
-C:\Users\Asus\Desktop\repositorio project\Uni-Helper-IV-Studio-Project-\06CodeOrBookly\Uni-Helper\src\main\java\ec\edu\espe\ivstudio\unihelper\model\AuthService.java
-C:\Users\Asus\Desktop\repositorio project\Uni-Helper-IV-Studio-Project-\06CodeOrBookly\Uni-Helper\src\main\java\ec\edu\espe\ivstudio\unihelper\model\BudgetService.java
-C:\Users\Asus\Desktop\repositorio project\Uni-Helper-IV-Studio-Project-\06CodeOrBookly\Uni-Helper\src\main\java\ec\edu\espe\ivstudio\unihelper\model\CalendarEvent.java
-C:\Users\Asus\Desktop\repositorio project\Uni-Helper-IV-Studio-Project-\06CodeOrBookly\Uni-Helper\src\main\java\ec\edu\espe\ivstudio\unihelper\model\GradeItem.java
-C:\Users\Asus\Desktop\repositorio project\Uni-Helper-IV-Studio-Project-\06CodeOrBookly\Uni-Helper\src\main\java\ec\edu\espe\ivstudio\unihelper\model\JsonStorage.java
-C:\Users\Asus\Desktop\repositorio project\Uni-Helper-IV-Studio-Project-\06CodeOrBookly\Uni-Helper\src\main\java\ec\edu\espe\ivstudio\unihelper\model\RoomIdentifier.java
-C:\Users\Asus\Desktop\repositorio project\Uni-Helper-IV-Studio-Project-\06CodeOrBookly\Uni-Helper\src\main\java\ec\edu\espe\ivstudio\unihelper\model\ScheduleService.java
-C:\Users\Asus\Desktop\repositorio project\Uni-Helper-IV-Studio-Project-\06CodeOrBookly\Uni-Helper\src\main\java\ec\edu\espe\ivstudio\unihelper\model\SpendingTier.java
-C:\Users\Asus\Desktop\repositorio project\Uni-Helper-IV-Studio-Project-\06CodeOrBookly\Uni-Helper\src\main\java\ec\edu\espe\ivstudio\unihelper\model\StudySession.java
-C:\Users\Asus\Desktop\repositorio project\Uni-Helper-IV-Studio-Project-\06CodeOrBookly\Uni-Helper\src\main\java\ec\edu\espe\ivstudio\unihelper\model\Subject.java
-C:\Users\Asus\Desktop\repositorio project\Uni-Helper-IV-Studio-Project-\06CodeOrBookly\Uni-Helper\src\main\java\ec\edu\espe\ivstudio\unihelper\model\Task.java
-C:\Users\Asus\Desktop\repositorio project\Uni-Helper-IV-Studio-Project-\06CodeOrBookly\Uni-Helper\src\main\java\ec\edu\espe\ivstudio\unihelper\model\TaskStatus.java
-C:\Users\Asus\Desktop\repositorio project\Uni-Helper-IV-Studio-Project-\06CodeOrBookly\Uni-Helper\src\main\java\ec\edu\espe\ivstudio\unihelper\model\UserAccount.java
-C:\Users\Asus\Desktop\repositorio project\Uni-Helper-IV-Studio-Project-\06CodeOrBookly\Uni-Helper\src\main\java\ec\edu\espe\ivstudio\unihelper\view\UniHelperApp.java
+C:\Users\USER\Documents\Repositorios de git\Uni-Helper repositorio\06CodeOrBookly\Uni-Helper\src\main\java\ec\edu\espe\ivstudio\unihelper\controller\AppController.java
+C:\Users\USER\Documents\Repositorios de git\Uni-Helper repositorio\06CodeOrBookly\Uni-Helper\src\main\java\ec\edu\espe\ivstudio\unihelper\controller\CalendarManager.java
+C:\Users\USER\Documents\Repositorios de git\Uni-Helper repositorio\06CodeOrBookly\Uni-Helper\src\main\java\ec\edu\espe\ivstudio\unihelper\controller\GradeManager.java
+C:\Users\USER\Documents\Repositorios de git\Uni-Helper repositorio\06CodeOrBookly\Uni-Helper\src\main\java\ec\edu\espe\ivstudio\unihelper\controller\StudySessionManager.java
+C:\Users\USER\Documents\Repositorios de git\Uni-Helper repositorio\06CodeOrBookly\Uni-Helper\src\main\java\ec\edu\espe\ivstudio\unihelper\controller\TaskManager.java
+C:\Users\USER\Documents\Repositorios de git\Uni-Helper repositorio\06CodeOrBookly\Uni-Helper\src\main\java\ec\edu\espe\ivstudio\unihelper\model\AuthService.java
+C:\Users\USER\Documents\Repositorios de git\Uni-Helper repositorio\06CodeOrBookly\Uni-Helper\src\main\java\ec\edu\espe\ivstudio\unihelper\model\BudgetCalculation.java
+C:\Users\USER\Documents\Repositorios de git\Uni-Helper repositorio\06CodeOrBookly\Uni-Helper\src\main\java\ec\edu\espe\ivstudio\unihelper\model\BudgetService.java
+C:\Users\USER\Documents\Repositorios de git\Uni-Helper repositorio\06CodeOrBookly\Uni-Helper\src\main\java\ec\edu\espe\ivstudio\unihelper\model\CalendarEvent.java
+C:\Users\USER\Documents\Repositorios de git\Uni-Helper repositorio\06CodeOrBookly\Uni-Helper\src\main\java\ec\edu\espe\ivstudio\unihelper\model\GradeItem.java
+C:\Users\USER\Documents\Repositorios de git\Uni-Helper repositorio\06CodeOrBookly\Uni-Helper\src\main\java\ec\edu\espe\ivstudio\unihelper\model\JsonStorage.java
+C:\Users\USER\Documents\Repositorios de git\Uni-Helper repositorio\06CodeOrBookly\Uni-Helper\src\main\java\ec\edu\espe\ivstudio\unihelper\model\RoomIdentifier.java
+C:\Users\USER\Documents\Repositorios de git\Uni-Helper repositorio\06CodeOrBookly\Uni-Helper\src\main\java\ec\edu\espe\ivstudio\unihelper\model\ScheduleService.java
+C:\Users\USER\Documents\Repositorios de git\Uni-Helper repositorio\06CodeOrBookly\Uni-Helper\src\main\java\ec\edu\espe\ivstudio\unihelper\model\SpendingTier.java
+C:\Users\USER\Documents\Repositorios de git\Uni-Helper repositorio\06CodeOrBookly\Uni-Helper\src\main\java\ec\edu\espe\ivstudio\unihelper\model\StudySession.java
+C:\Users\USER\Documents\Repositorios de git\Uni-Helper repositorio\06CodeOrBookly\Uni-Helper\src\main\java\ec\edu\espe\ivstudio\unihelper\model\Subject.java
+C:\Users\USER\Documents\Repositorios de git\Uni-Helper repositorio\06CodeOrBookly\Uni-Helper\src\main\java\ec\edu\espe\ivstudio\unihelper\model\Task.java
+C:\Users\USER\Documents\Repositorios de git\Uni-Helper repositorio\06CodeOrBookly\Uni-Helper\src\main\java\ec\edu\espe\ivstudio\unihelper\model\TaskStatus.java
+C:\Users\USER\Documents\Repositorios de git\Uni-Helper repositorio\06CodeOrBookly\Uni-Helper\src\main\java\ec\edu\espe\ivstudio\unihelper\model\UserAccount.java
+C:\Users\USER\Documents\Repositorios de git\Uni-Helper repositorio\06CodeOrBookly\Uni-Helper\src\main\java\ec\edu\espe\ivstudio\unihelper\view\UniHelperApp.java

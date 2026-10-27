@@ -27,8 +27,8 @@ public class StudySessionManager {
         
         try{
             for (int i = session.getDurationMinutes(); i > 0; i--){
-                System.out.println("Time remaining: " + i + "minute(s)..");
-                Thread.sleep(1000);
+                System.out.println("\rTime remaining: " + i + " minute(s)..");
+                Thread.sleep(60000);
             }
             completedSessions.add(session);
             System.out.println("Great job! Study session completed.\n");
