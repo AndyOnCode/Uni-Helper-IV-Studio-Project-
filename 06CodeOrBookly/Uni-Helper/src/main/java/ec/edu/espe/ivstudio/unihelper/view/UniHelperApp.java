@@ -291,12 +291,20 @@ public class UniHelperApp {
                     }
                 }
                 case 10 -> {
-                    if (saveUsers(existingUsers)) {
-                        System.out.println("All session data saved. Exiting Uni-Helper...");
+                    boolean jsonOk = saveUsers(existingUsers);
+                    String csvFileName = "summary_" + currentUser.getUsername() + ".csv";
+                    boolean csvOk = CsvStorage.exportUserSummaryToCsv(csvFileName, currentUser);
+
+                    if (jsonOk && csvOk) {
+                        System.out.println("All session data saved in JSON and exported to " + csvFileName + ".");
+                    } else if (jsonOk) {
+                        System.out.println("JSON saved, but CSV export failed.");
                     } else {
-                        System.out.println("Some session data could not be saved. Exiting Uni-Helper...");
+                        System.out.println("Some session data could not be saved.");
                     }
+                    System.out.println("Exiting Uni-Helper...");
                 }
+                
                 default -> System.out.println("Invalid option. Try again.");
             }
         } while (option != 10);

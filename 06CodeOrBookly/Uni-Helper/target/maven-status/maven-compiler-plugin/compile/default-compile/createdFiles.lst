@@ -1,5 +1,6 @@
 ec\edu\espe\ivstudio\unihelper\controller\TaskManager.class
 ec\edu\espe\ivstudio\unihelper\model\Task.class
+ec\edu\espe\ivstudio\unihelper\model\CsvStorage.class
 ec\edu\espe\ivstudio\unihelper\model\TaskStatus.class
 ec\edu\espe\ivstudio\unihelper\model\Subject.class
 ec\edu\espe\ivstudio\unihelper\view\UniHelperApp.class

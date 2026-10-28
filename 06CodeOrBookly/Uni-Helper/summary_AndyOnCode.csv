@@ -1,0 +1,12 @@
+=== CALENDAR EVENTS ===
+Title,Date,Time,Description
+"ordinary differential equations exam",2026-10-28,9:00,"Study all resolutions of the EDO's"
+
+=== GRADES ===
+GradeName,Score,WeightPercentage
+"Physic 1 - Test 1.u1",8.00,25.00
+"OOP Project",19.00,20.00
+
+=== STUDY SESSIONS ===
+Topic,DurationMinutes
+"EDO's resolutions",120
