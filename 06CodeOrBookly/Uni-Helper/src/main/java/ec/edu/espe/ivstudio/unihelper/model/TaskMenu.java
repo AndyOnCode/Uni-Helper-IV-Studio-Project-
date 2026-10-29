@@ -145,7 +145,6 @@ public class TaskMenu {
             return;
         }
 
-        // Mostrar las tareas para elegir
         for (Task t : manager.getTasks()) {
             System.out.println(t);
         }
