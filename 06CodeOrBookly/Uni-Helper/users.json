@@ -86,5 +86,15 @@
         "calculatedBudgetCents": 3150
       }
     ]
+  },
+  {
+    "username": "Nohemi",
+    "passwordHash": "9b949199f153bc7f19d5956d0a1beaf6b18e7175dadf823760537a0db5d64e5d",
+    "tasks": [],
+    "calendarEvents": [],
+    "grades": [],
+    "studySessions": [],
+    "scheduleBlocks": [],
+    "budgetCalculations": []
   }
 ]

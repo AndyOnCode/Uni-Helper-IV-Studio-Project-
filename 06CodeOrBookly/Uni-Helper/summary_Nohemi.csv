@@ -1,0 +1,8 @@
+=== CALENDAR EVENTS ===
+Title,Date,Time,Description
+
+=== GRADES ===
+GradeName,Score,WeightPercentage
+
+=== STUDY SESSIONS ===
+Topic,DurationMinutes

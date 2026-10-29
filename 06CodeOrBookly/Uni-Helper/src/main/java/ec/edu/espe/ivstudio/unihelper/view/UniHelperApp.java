@@ -88,20 +88,24 @@ public class UniHelperApp {
         BudgetService budgetService = new BudgetService();
         ScheduleService scheduleService = new ScheduleService(currentUser.getScheduleBlocks());
 
+        TaskMenu taskMenu = new TaskMenu(scanner, manager);
        
         int option = 0;
         do {
             System.out.println("\n==== UNI-HELPER: MAIN CONTROL (" + currentUser.getUsername() + ") =====");
             System.out.println("1. Add Events (Calendar)");
             System.out.println("2. View Events (Calendar)");
-            System.out.println("3. Add Grade");
-            System.out.println("4. View Grades & Average");
-            System.out.println("5. Start Study Session");
-            System.out.println("6. View Study Sessions");
-            System.out.println("7. Calculate Smart Daily Budget");
-            System.out.println("8. Add Academic Schedule Block");
-            System.out.println("9. View Academic Schedule");
-            System.out.println("10. Save and Exit");
+            System.out.println("3. Add Task");
+            System.out.println("4. View Task / Filter by Subject");
+            System.out.println("5. Change Task Status");
+            System.out.println("6. Add Grade");
+            System.out.println("7. View Grades & Average");
+            System.out.println("8. Start Study Session");
+            System.out.println("9. View Study Sessions");
+            System.out.println("10. Calculate Smart Daily Budget");
+            System.out.println("11. Add Academic Schedule Block");
+            System.out.println("12. View Academic Schedule");
+            System.out.println("13. Save and Exit");
             System.out.print("Select an option: ");
 
             option = scanner.nextInt();
@@ -140,7 +144,16 @@ public class UniHelperApp {
                         }
                     }
                 }
-                case 3 -> {
+                case 3 ->{
+                    taskMenu.addTask();
+                }
+                case 4 ->{
+                    taskMenu.filterBySubject();
+                }
+                case 5 ->{
+                    taskMenu.changeTaskStatus();
+                }
+                case 6 -> {
                     System.out.print("Enter grade name: ");
                     String gradeName = scanner.nextLine();
                     System.out.print("Enter score: ");
@@ -161,7 +174,7 @@ public class UniHelperApp {
                         System.out.println("Grade registered, but could not be saved.");
                     }
                 }
-                case 4 -> {
+                case 7 -> {
                     System.out.println("\n--- GRADED ITEMS ---");
                     if (gradeManager.getGrades().isEmpty()) {
                         System.out.println("No grades registered yet.");
@@ -172,7 +185,7 @@ public class UniHelperApp {
                         System.out.println("Weighted Average: " + gradeManager.calculationWeightedAverage());
                     }
                 }
-                case 5 -> {
+                case 8 -> {
                     System.out.print("Enter study topic: ");
                     String topic = scanner.nextLine();
                     System.out.print("Enter duration in minutes: ");
@@ -193,7 +206,7 @@ public class UniHelperApp {
                         System.out.println("Study session completed, but could not be saved.");
                     }
                 }
-                case 6 -> {
+                case 9 -> {
                     System.out.println("\n--- COMPLETED STUDY SESSIONS ---");
                     if (studySessionManager.getCompletedSessions().isEmpty()) {
                         System.out.println("No study sessions completed yet.");
@@ -204,7 +217,7 @@ public class UniHelperApp {
                         System.out.println("Total Study Time: " + studySessionManager.getTotalStudyTimeMinutes() + " minutes.");
                     }
                 }
-                case 7 -> {
+                case 10 -> {
                     System.out.println("\n--- SMART BUDGET CALCULATOR ---");
                     System.out.println("Select Profile: 1. SAVE | 2. RECOMMENDED | 3. SOCIAL");
                     System.out.print("Choice: ");
@@ -234,7 +247,7 @@ public class UniHelperApp {
                         System.out.println("Budget calculation could not be saved.");
                     }
                 }
-                case 8 -> {
+                case 11 -> {
                     System.out.println("\n--- ADD ACADEMIC SCHEDULE BLOCK ---");
                     System.out.print("Enter Day of Week (e.g., MONDAY, TUESDAY, FRIDAY): ");
                     String dayStr = scanner.nextLine().trim().toUpperCase();
@@ -272,7 +285,7 @@ public class UniHelperApp {
                         System.out.println("Schedule Restriction: " + e.getMessage());
                     }
                 }
-                case 9 -> {
+                case 12 -> {
                     System.out.print("Enter Day of Week to inspect (e.g., MONDAY, THURSDAY): ");
                     String dayStr = scanner.nextLine().trim().toUpperCase();
                     try {
@@ -290,7 +303,7 @@ public class UniHelperApp {
                         System.out.println("Invalid day entered.");
                     }
                 }
-                case 10 -> {
+                case 13 -> {
                     boolean jsonOk = saveUsers(existingUsers);
                     String csvFileName = "summary_" + currentUser.getUsername() + ".csv";
                     boolean csvOk = CsvStorage.exportUserSummaryToCsv(csvFileName, currentUser);
@@ -307,7 +320,7 @@ public class UniHelperApp {
                 
                 default -> System.out.println("Invalid option. Try again.");
             }
-        } while (option != 10);
+        } while (option != 13);
     }
 
     private static boolean saveUsers(List<UserAccount> users) {
